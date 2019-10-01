@@ -1,9 +1,9 @@
 html {
   --fnt-alfa-slab: 'Alfa Slab One', cursive;
-  --fnt-lato: 'Lato', sans-serif;
+  --fnt-lato: 'Special Elite', cursive;
 }
 
-body * {
+* {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -15,7 +15,7 @@ body {
   font-weight: 400;
   font-size: 16px;
   line-height: 1.7;
-  color: #777;
+  color: rgba(255,255, 255, 1);
 }
 
 header:before {
@@ -24,25 +24,46 @@ header:before {
   top: 0;
   left: 0;
   width: 100%; height: 100%;
-  background-image: url(https://cdn.glitch.com/c4b6053a-71c0-429d-a324-d108ad1d1e87%2Ffki_class.jpg?v=1569904644421);
+  background-image:
+    linear-gradient(to right bottom, rgba(255, 0, 0, .8), rgba(0,0,0,.8)),
+    url(https://cdn.glitch.com/c4b6053a-71c0-429d-a324-d108ad1d1e87%2Ffki_class.jpg?v=1569904644421);
   background-size: cover;
   background-position: center;
-  filter: grayscale(100%);
   opacity: .4;
+  z-index: -1;
 }
 
 header {
-  background: red;
   display: flex;
-  height: 95vh;
+  flex-direction: column;
+  height: 100vh;
   position: relative;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
 }
 
 div.header-content {
-  color: black;
-  font-size: 10vw;
   position: relative;
   display: inline-block;
+}
+
+header h1 {
+  color: black;
+  font-size: 10vw;
+  letter-spacing: 20px;
+  opacity: .5;
+}
+
+header h2,
+header h3 {
+  font-family: var(--fnt-lato), sans-serif;
+}
+
+header h2 {
+  font-size: 4vw;
+}
+
+header h3 {
+  font-size: 3vw;
 }
